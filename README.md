@@ -3,7 +3,7 @@
 This repository was just a fun session live coding the Redux store from scratch.
 If you want to learn more about Redux, check out the
 [official site](https:reduxjs.org) as well as the amazing tutorial,
-[Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
+[Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux), 
 from Dan Abramov.
 
 The project uses yarn, but you should be fine if you're using npm. For tests, it
