@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Having fun recreating Redux",
   "main": "src/index.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "type": "module",
   "scripts": {
     "test": "jest"
