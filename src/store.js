@@ -1,24 +1,22 @@
 export function createStore(reducer, initialState) {
   let state = initialState;
-  let listeners = [];
+  let listeners = new Set();
 
   const getState = () => state;
 
   const dispatch = (action) => {
     state = reducer(state, action);
 
-    listeners.forEach((listener) => {
+    for (let [listener] of listeners.entries()) {
       listener(state);
-    });
+    }
   };
 
   const subscribe = (listener) => {
-    listeners.push(listener);
+    listeners.add(listener);
 
     return () => {
-      listeners = listeners.filter(
-        (potentialListenerToEvict) => potentialListenerToEvict !== listener,
-      );
+      listeners.delete(listener);
     };
   };
 
